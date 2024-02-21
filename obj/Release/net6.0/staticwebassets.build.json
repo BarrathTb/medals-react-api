@@ -1,11 +1,77 @@
 {
   "Version": 1,
-  "Hash": "5yoSrswF9WYmk4pxsC9iMzCdq3webEN8rogZVz+Znm8=",
+  "Hash": "UXPK2WVZ7rMBfH5cDJefZh4jRQ+2mpg7tH9/0lmSNEY=",
   "Source": "medals-react-api",
   "BasePath": "_content/medals-react-api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "medals-react-api\\wwwroot",
+      "Source": "medals-react-api",
+      "ContentRoot": "C:\\Users\\Barra\\OneDrive - Waukesha County Technical College\\WctcClassWork\\Adv Web Services\\medals-react-api\\wwwroot\\",
+      "BasePath": "_content/medals-react-api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Barra\\OneDrive - Waukesha County Technical College\\WctcClassWork\\Adv Web Services\\medals-react-api\\wwwroot\\client.js",
+      "SourceId": "medals-react-api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Barra\\OneDrive - Waukesha County Technical College\\WctcClassWork\\Adv Web Services\\medals-react-api\\wwwroot\\",
+      "BasePath": "_content/medals-react-api",
+      "RelativePath": "client.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\client.js"
+    },
+    {
+      "Identity": "C:\\Users\\Barra\\OneDrive - Waukesha County Technical College\\WctcClassWork\\Adv Web Services\\medals-react-api\\wwwroot\\favicon.png",
+      "SourceId": "medals-react-api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Barra\\OneDrive - Waukesha County Technical College\\WctcClassWork\\Adv Web Services\\medals-react-api\\wwwroot\\",
+      "BasePath": "_content/medals-react-api",
+      "RelativePath": "favicon.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\Barra\\OneDrive - Waukesha County Technical College\\WctcClassWork\\Adv Web Services\\medals-react-api\\wwwroot\\index.html",
+      "SourceId": "medals-react-api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Barra\\OneDrive - Waukesha County Technical College\\WctcClassWork\\Adv Web Services\\medals-react-api\\wwwroot\\",
+      "BasePath": "_content/medals-react-api",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ]
 }

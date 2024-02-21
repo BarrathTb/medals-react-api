@@ -6,10 +6,11 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Cors;
 using Swashbuckle.AspNetCore.Annotations;
+using Microsoft.AspNetCore.JsonPatch;
 
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("[controller]")]
 
 public class CountriesController : ControllerBase
 {
@@ -97,58 +98,17 @@ public class CountriesController : ControllerBase
   }
 
   // PATCH: Api/Countries/5/Medals add a medal to a country or remove
-  [HttpPatch("{id}/AddMedal"), SwaggerOperation(Summary = "Add a medal to a country")]
-  public async Task<IActionResult> AddMedals(int id, string metalType)
+  // http patch member of collection
+  [HttpPatch("{id}"), SwaggerOperation(summary: "update member from collection", null), ProducesResponseType(typeof(Country), 204), SwaggerResponse(204, "No Content")]
+  // update country (specific fields)
+  public async Task<ActionResult> Patch(int id, [FromBody] JsonPatchDocument<Country> patch)
   {
-    var country = await _context.Countries.FindAsync(id);
+    Country country = await _context.Countries.FindAsync(id);
     if (country == null)
     {
       return NotFound();
     }
-    switch (metalType.ToLower())
-    {
-      case "gold":
-        country.Gold += 1;
-        break;
-      case "silver":
-        country.Silver += 1;
-        break;
-      case "bronze":
-        country.Bronze += 1;
-        break;
-      default:
-        return BadRequest("Invalid medal type.");
-    }
-
-
-    await _context.SaveChangesAsync();
-
-    return Ok(); // or return Ok(existingMedal);
-  }
-
-  [HttpPatch("{id}/RemoveMedal"), SwaggerOperation(Summary = "Remove a medal from a country")]
-  public async Task<IActionResult> RemoveMedals(int id, string metalType)
-  {
-    var country = await _context.Countries.FindAsync(id);
-    if (country == null)
-    {
-      return NotFound();
-    }
-    switch (metalType.ToLower())
-    {
-      case "gold":
-        country.Gold -= 1;
-        break;
-      case "silver":
-        country.Silver -= 1;
-        break;
-      case "bronze":
-        country.Bronze -= 1;
-        break;
-      default:
-        return BadRequest("Invalid medal type.");
-
-    }
+    patch.ApplyTo(country);
     await _context.SaveChangesAsync();
     return Ok();
   }

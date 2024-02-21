@@ -1,1 +1,7 @@
+.vscode
+bin
+obj
+Properties
 appsettings.json
+*.sqlite
+*.sqlite-*
